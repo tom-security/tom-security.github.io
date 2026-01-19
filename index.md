@@ -33,3 +33,8 @@ Tu pourras bientôt retrouver ici :
 - Mon LinkedIn
 - Mon GitHub
 - Mon adresse pro personnelle
+  
+---
+
+## 🔗 Voir mes projets
+➡️ [Accéder à la section Projets](projects/)
