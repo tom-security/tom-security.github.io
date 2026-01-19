@@ -6,6 +6,8 @@ Vous trouverez ici mes analyses, mes exercices, mes notes et mes expérimentatio
 ## 🔹 Analyses réseau (Wireshark)
 À venir : études de paquets, inspection TLS, filtrage, extraction d’informations.
 
+➡️ [Introduction à Wireshark](wireshark-intro/)
+
 ## 🔹 Linux & scripts
 À venir : commandes essentielles, automatisations simples, environnements d’apprentissage.
 
