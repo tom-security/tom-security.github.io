@@ -1,5 +1,6 @@
 ---
 layout: default
+title: "Accueil"
 ---
 
 {% include nav.html %}
