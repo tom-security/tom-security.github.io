@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 {% include nav.html %}
 
 #  Tom Latchimy  
