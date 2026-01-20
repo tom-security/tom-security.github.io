@@ -1,4 +1,4 @@
-# 📁 Projets
+#  Projets
 
 Bienvenue dans la section dédiée à mes projets en cybersécurité.  
 Vous trouverez ici mes analyses, mes exercices, mes notes et mes expérimentations.
