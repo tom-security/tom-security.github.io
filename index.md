@@ -7,7 +7,7 @@ J’explore l’analyse réseau, les environnements Linux, les outils de diagnos
 
 ---
 
-## 🛠️ Compétences techniques
+##  Compétences techniques
 - Analyse réseau (Wireshark)
 - Linux (commandes essentielles, gestion système)
 - Sécurité informatique (bases, bonnes pratiques)
@@ -15,12 +15,12 @@ J’explore l’analyse réseau, les environnements Linux, les outils de diagnos
 
 ---
 
-## 🎯 Objectif professionnel
+##  Objectif professionnel
 Construire une carrière solide en cybersécurité et évoluer progressivement vers des responsabilités de sécurité.
 
 ---
 
-## 📘 Projets à venir
+##  Projets à venir
 - Analyses Wireshark
 - Notes HTB Academy
 - Scripts et outils simples
@@ -28,12 +28,12 @@ Construire une carrière solide en cybersécurité et évoluer progressivement v
 
 ---
 
-## 📫 Me contacter
+##  Me contacter
 - [Mon LinkedIn](https://www.linkedin.com/in/tom-latchimy)
 - [Mon GitHub](https://github.com/tom-security)
 - Mon adresse pro personnelle
   
 ---
 
-## 🔗 Voir mes projets
+##  Voir mes projets
 ➡️ [Accéder à la section Projets](projects/)
