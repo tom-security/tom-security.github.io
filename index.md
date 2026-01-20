@@ -29,8 +29,7 @@ Construire une carrière solide en cybersécurité et évoluer progressivement v
 ---
 
 ## 📫 Me contacter
-Tu pourras bientôt retrouver ici :
-- Mon LinkedIn
+- [Mon LinkedIn](https://www.linkedin.com/in/tom-latchimy)
 - Mon GitHub
 - Mon adresse pro personnelle
   
