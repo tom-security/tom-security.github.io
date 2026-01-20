@@ -1,5 +1,3 @@
-{% include nav.html %}
-
 #  Tom Latchimy  
 ### Étudiant en cybersécurité | Analyse réseau | Linux | HTB Academy
 
