@@ -1,11 +1,11 @@
-# 🔍 Analyse réseau – Introduction à Wireshark
+#  Analyse réseau – Introduction à Wireshark
 
 Ce projet présente mes premières analyses réseau réalisées avec Wireshark.  
 L’objectif est de comprendre comment observer le trafic, identifier les protocoles et analyser les échanges.
 
 ---
 
-## 🎯 Objectifs du projet
+##  Objectifs du projet
 - Comprendre la structure d’une capture réseau (.pcap)
 - Identifier les protocoles utilisés (HTTP, DNS, TLS…)
 - Utiliser les filtres Wireshark pour isoler des paquets
@@ -14,7 +14,7 @@ L’objectif est de comprendre comment observer le trafic, identifier les protoc
 
 ---
 
-## 📡 Exemple d’analyse : Handshake TLS
+##  Exemple d’analyse : Handshake TLS
 Dans cette analyse, j’ai observé un début de connexion HTTPS.
 
 ### 🔹 Ce que j’ai identifié
@@ -30,7 +30,7 @@ Dans cette analyse, j’ai observé un début de connexion HTTPS.
 
 ---
 
-## 🧪 Filtres Wireshark utilisés
+##  Filtres Wireshark utilisés
 - `tls.handshake`
 - `http`
 - `dns`
@@ -39,7 +39,7 @@ Dans cette analyse, j’ai observé un début de connexion HTTPS.
 
 ---
 
-## 📘 Conclusion
+##  Conclusion
 Cette première analyse m’a permis de mieux comprendre comment fonctionne une communication réseau et comment Wireshark permet d’observer les échanges en détail.
 
 D’autres analyses plus avancées arriveront bientôt.
