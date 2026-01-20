@@ -4,7 +4,6 @@ Bienvenue dans la section dédiée à mes projets en cybersécurité.
 Vous trouverez ici mes analyses, mes exercices, mes notes et mes expérimentations.
 
 ## 🔹 Analyses réseau (Wireshark)
-À venir : études de paquets, inspection TLS, filtrage, extraction d’informations.
 
 ➡️ [Introduction à Wireshark](wireshark-intro/)
 
