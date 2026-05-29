@@ -407,7 +407,7 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Étudiant au <span className="text-cyber font-medium">SEPR</span> en 1ère Professionnelle CIEL, en alternance chez <span className="text-cyber font-medium">DOMINO-RH</span>.
+              Étudiant à la <span className="text-cyber font-medium">SEPR</span> en 1ère Professionnelle CIEL, en alternance chez <span className="text-cyber font-medium">DOMINO-RH</span>.
               Je me forme en cybersécurité, support IT et administration système.
             </motion.p>
 
@@ -522,7 +522,7 @@ export default function Home() {
             {/* Bio */}
             <div className="md:col-span-3 space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Je suis <span className="text-foreground font-medium">Tom Latchimy</span>, élève au{' '}
+                Je suis <span className="text-foreground font-medium">Tom Latchimy</span>, élève à la{' '}
                 <span className="text-cyber font-medium">SEPR en 1ère Professionnelle CIEL</span>, en alternance au service informatique de <span className="text-cyber font-medium">DOMINO-RH</span>.
                 Je me forme chaque jour en administration système, support IT et cybersécurité.
               </p>
