@@ -30,6 +30,11 @@ import {
   Users,
   Globe,
   Heart,
+  Languages,
+  Mountain,
+  Plane,
+  Printer,
+  Cable,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
@@ -52,23 +57,33 @@ const NAV_LINKS = [
 // Niveaux : "découverte" = je découvre, "en_cours" = j'apprends activement, "notions" = j'ai les bases
 const SKILLS = [
   {
-    category: 'Réseau & Analyse',
-    icon: Wifi,
+    category: 'Administration & Support',
+    icon: Server,
     items: [
-      { name: 'Wireshark — bases', level: 'en_cours' },
-      { name: 'Protocoles (HTTP, DNS)', level: 'notions' },
-      { name: 'Modèle OSI / TCP-IP', level: 'en_cours' },
-      { name: 'Adressage IP / sous-réseaux', level: 'notions' },
+      { name: 'Active Directory (comptes & groupes)', level: 'en_cours' },
+      { name: 'Résolution de tickets (Helpdesk)', level: 'en_cours' },
+      { name: 'Assistance utilisateurs N1', level: 'en_cours' },
+      { name: 'Installation & config postes', level: 'notions' },
     ],
   },
   {
-    category: 'Linux & Systèmes',
+    category: 'Matériel & Réseau',
+    icon: Wrench,
+    items: [
+      { name: 'Dépannage matériel & imprimantes', level: 'en_cours' },
+      { name: 'Installation OS & maintenance', level: 'notions' },
+      { name: 'Câblage RJ45', level: 'notions' },
+      { name: 'Wireshark — bases', level: 'découverte' },
+    ],
+  },
+  {
+    category: 'Systèmes & Réseaux',
     icon: Terminal,
     items: [
-      { name: 'Commandes de base Linux', level: 'en_cours' },
-      { name: 'Navigation fichier & droits', level: 'notions' },
-      { name: 'Shell scripting', level: 'découverte' },
       { name: 'Windows / Active Directory', level: 'notions' },
+      { name: 'Commandes Linux de base', level: 'découverte' },
+      { name: 'Modèle OSI / TCP-IP', level: 'en_cours' },
+      { name: 'Protocoles (HTTP, DNS)', level: 'notions' },
     ],
   },
   {
@@ -79,16 +94,6 @@ const SKILLS = [
       { name: 'HTB Academy (débuts)', level: 'découverte' },
       { name: 'Chiffrement & TLS (concepts)', level: 'découverte' },
       { name: 'Sensibilisation aux risques', level: 'notions' },
-    ],
-  },
-  {
-    category: 'Support Informatique',
-    icon: Wrench,
-    items: [
-      { name: 'Diagnostic & dépannage', level: 'en_cours' },
-      { name: 'Assistance utilisateurs', level: 'en_cours' },
-      { name: 'Installation & configuration', level: 'notions' },
-      { name: 'Documentation technique', level: 'en_cours' },
     ],
   },
 ]
@@ -173,12 +178,28 @@ const TERMINAL_LINES = [
 
 const TIMELINE = [
   {
+    period: 'Août 2025 – 2027',
+    title: 'DOMINO-RH — Alternant Service Informatique',
+    subtitle: 'Technicien support IT en alternance',
+    description: 'Gestion Active Directory, résolution de tickets, installation de postes, dépannage matériel et imprimantes.',
+    icon: Briefcase,
+    current: true,
+  },
+  {
     period: '2025 – 2027',
     title: 'SEPR — Première Professionnelle CIEL',
     subtitle: 'Cybersécurité, Informatique et Réseaux, Électronique — En alternance',
-    description: 'Formation en cybersécurité, informatique et réseaux avec alternance en entreprise.',
+    description: 'Formation en cybersécurité, informatique et réseaux avec alternance chez DOMINO-RH.',
     icon: GraduationCap,
     current: true,
+  },
+  {
+    period: 'Mai – Juin 2025',
+    title: 'DOMINO-RH — Stage Assistant Technicien',
+    subtitle: 'Stage de découverte du Service Informatique',
+    description: 'Découverte de l\'environnement professionnel, assistance utilisateurs et résolution de problèmes N1.',
+    icon: Briefcase,
+    current: false,
   },
   {
     period: '2024 – 2025',
@@ -186,6 +207,14 @@ const TIMELINE = [
     subtitle: 'Cybersécurité, Informatique et Réseaux, Électronique',
     description: 'Année de seconde professionnelle, découverte du domaine CIEL et des fondamentaux informatiques.',
     icon: GraduationCap,
+    current: false,
+  },
+  {
+    period: '2023 – 2024',
+    title: 'BIOMERIEUX — Stage d\'observation (3ème)',
+    subtitle: 'Découverte des métiers de l\'informatique',
+    description: 'Stage d\'observation en entreprise, découverte du milieu professionnel et des métiers IT.',
+    icon: Briefcase,
     current: false,
   },
   {
@@ -199,12 +228,12 @@ const TIMELINE = [
 ]
 
 const ALTERNANCE_TASKS = [
-  { icon: Wrench, label: 'Dépannage matériel & logiciel', desc: 'Diagnostic et résolution des pces utilisateurs' },
-  { icon: Users, label: 'Assistance utilisateurs', desc: 'Support de premier niveau au quotidien' },
-  { icon: Monitor, label: 'Installation & déploiement', desc: 'Mise en place de postes et logiciels' },
-  { icon: Bug, label: 'Résolution d\'incidents', desc: 'Ticketing et suivi des problèmes' },
-  { icon: FileSearch, label: 'Documentation', desc: 'Rédaction de procédures et guides' },
-  { icon: Shield, label: 'Sensibilisation sécurité', desc: 'Bonne pratiques et hygiène numérique' },
+  { icon: Users, label: 'Active Directory', desc: 'Création, modification de comptes utilisateurs et groupes' },
+  { icon: Bug, label: 'Résolution de tickets', desc: 'Incidents et requêtes support niveau 1' },
+  { icon: Monitor, label: 'Installation postes', desc: 'Configuration pour les nouveaux arrivants' },
+  { icon: Wrench, label: 'Dépannage matériel', desc: 'Diagnostic et réparation de pannes' },
+  { icon: Printer, label: 'Configuration imprimantes', desc: 'Installation et mise en service' },
+  { icon: Cable, label: 'Câblage RJ45', desc: 'Raccordement et câblage réseau' },
 ]
 
 export default function Home() {
@@ -378,8 +407,8 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Étudiant au <span className="text-cyber font-medium">SEPR</span> en 1ère Professionnelle CIEL en alternance.
-              Je me forme en cybersécurité, analyse réseau et support informatique.
+              Étudiant au <span className="text-cyber font-medium">SEPR</span> en 1ère Professionnelle CIEL, en alternance chez <span className="text-cyber font-medium">DOMINO-RH</span>.
+              Je me forme en cybersécurité, support IT et administration système.
             </motion.p>
 
             <motion.div
@@ -489,13 +518,13 @@ export default function Home() {
             <div className="md:col-span-3 space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Je suis <span className="text-foreground font-medium">Tom Latchimy</span>, élève au{' '}
-                <span className="text-cyber font-medium">SEPR en 1ère Professionnelle CIEL</span> en alternance dans un service informatique.
-                Je me forme chaque jour en cybersécurité, analyse réseau et support IT.
+                <span className="text-cyber font-medium">SEPR en 1ère Professionnelle CIEL</span>, en alternance au service informatique de <span className="text-cyber font-medium">DOMINO-RH</span>.
+                Je me forme chaque jour en administration système, support IT et cybersécurité.
               </p>
 
               <p className="text-muted-foreground leading-relaxed">
-                En alternance, je fais du diagnostic, du support utilisateurs et de la maintenance.
-                Le reste du temps, j&apos;apprends avec <span className="text-cyber font-medium">Wireshark</span>,{' '}
+                En alternance chez DOMINO-RH, je gère l&apos;Active Directory, résous des tickets helpdesk, installe des postes et dépanne le matériel.
+                En autonomie, j&apos;apprends avec <span className="text-cyber font-medium">Wireshark</span>,{' '}
                 <span className="text-cyber font-medium">Linux</span> et{' '}
                 <span className="text-cyber font-medium">HTB Academy</span>.
                 Ce portfolio documente ma progression.
@@ -504,7 +533,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4 pt-2">
                 {[
                   { icon: GraduationCap, label: 'Formation', value: 'SEPR — 1ère Pro CIEL' },
-                  { icon: Briefcase, label: 'Alternance', value: 'Service informatique' },
+                  { icon: Briefcase, label: 'Alternance', value: 'DOMINO-RH — SI' },
                   { icon: Wifi, label: 'Intérêt', value: 'Analyse réseau' },
                   { icon: Shield, label: 'Objectif', value: 'Cybersécurité' },
                 ].map((item) => (
@@ -571,11 +600,11 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-xl">
                   <Briefcase className="w-6 h-6 text-cyber" />
-                  Mon alternance en service informatique
+                  Mon alternance chez DOMINO-RH
                 </CardTitle>
                 <CardDescription className="text-muted-foreground leading-relaxed">
-                  En alternance dans un service informatique, je participe activement au support et à la maintenance
-                  au quotidien. Voici les missions que je réalise.
+                  En alternance au service informatique de DOMINO-RH depuis août 2025, je participe activement
+                  au support et à l&apos;administration au quotidien. Voici les missions que je réalise.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -838,8 +867,8 @@ export default function Home() {
               {
                 icon: Mail,
                 label: 'Email',
-                value: 'Me contacter',
-                href: 'mailto:tom.latchimy@exemple.fr',
+                value: 'tomiatchimy6@gmail.com',
+                href: 'mailto:tomiatchimy6@gmail.com',
                 color: 'text-cyber',
               },
             ].map((item, idx) => (
@@ -871,6 +900,85 @@ export default function Home() {
                 </a>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Soft Skills, Langues & Centres d'intérêt */}
+      <SectionWrapper id="about-me" className="relative z-10 py-20 sm:py-28 grid-pattern">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Soft Skills */}
+            <Card className="bg-card/60 backdrop-blur-sm border-border/50 glow-border h-full">
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <Heart className="w-5 h-5 text-cyber" />
+                  Qualités personnelles
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2">
+                  {['Esprit d\'équipe', 'Polyvalent', 'Rigoureux', 'Motivé', 'Investi', 'Gestion de projet'].map((skill) => (
+                    <Badge
+                      key={skill}
+                      variant="outline"
+                      className="font-mono text-xs border-cyber/20 text-cyber/80 hover:bg-cyber/10 transition-colors"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Langues */}
+            <Card className="bg-card/60 backdrop-blur-sm border-border/50 glow-border h-full">
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <Languages className="w-5 h-5 text-cyber" />
+                  Langues
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm font-medium">Français</span>
+                  <Badge className="bg-cyber/20 text-cyber border-cyber/30 font-mono text-[10px]">Langue maternelle</Badge>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-sm font-medium">Anglais</span>
+                  <Badge variant="outline" className="font-mono text-[10px] border-amber-500/30 text-amber-400">En cours</Badge>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Centres d'intérêt */}
+            <Card className="bg-card/60 backdrop-blur-sm border-border/50 glow-border h-full">
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <Heart className="w-5 h-5 text-cyber" />
+                  Centres d&apos;intérêt
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {[
+                    { icon: Mountain, label: 'Randonnée' },
+                    { icon: Globe, label: 'Voyage' },
+                  ].map((item) => (
+                    <div key={item.label} className="flex items-center gap-3 p-2 rounded-lg bg-background/30 border border-border/30">
+                      <item.icon className="w-4 h-4 text-cyber shrink-0" />
+                      <span className="text-sm">{item.label}</span>
+                    </div>
+                  ))}
+                  {['Mode', 'Volley'].map((item) => (
+                    <div key={item} className="flex items-center gap-3 p-2 rounded-lg bg-background/30 border border-border/30">
+                      <Heart className="w-4 h-4 text-cyber shrink-0" />
+                      <span className="text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </SectionWrapper>
