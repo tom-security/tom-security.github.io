@@ -173,20 +173,28 @@ const TERMINAL_LINES = [
 
 const TIMELINE = [
   {
-    period: '2024 – 2026',
-    title: 'BAC Pro CIEL — Cybersécurité',
-    subtitle: '1ère année (en cours)',
-    description: 'Formation en cybersécurité, informatique et réseaux. Alternance en entreprise.',
+    period: '2025 – 2027',
+    title: 'SEPR — Première Professionnelle CIEL',
+    subtitle: 'Cybersécurité, Informatique et Réseaux, Électronique — En alternance',
+    description: 'Formation en cybersécurité, informatique et réseaux avec alternance en entreprise.',
     icon: GraduationCap,
     current: true,
   },
   {
-    period: '2024 – Présent',
-    title: 'Alternance — Service Informatique',
-    subtitle: 'Technicien support IT',
-    description: 'Diagnostic, assistance utilisateurs, installation et maintenance dans un service informatique.',
-    icon: Briefcase,
-    current: true,
+    period: '2024 – 2025',
+    title: 'École La Mache — Seconde Professionnelle CIEL',
+    subtitle: 'Cybersécurité, Informatique et Réseaux, Électronique',
+    description: 'Année de seconde professionnelle, découverte du domaine CIEL et des fondamentaux informatiques.',
+    icon: GraduationCap,
+    current: false,
+  },
+  {
+    period: '2023 – 2024',
+    title: 'Notre Dame du Bon Conseil — Troisième Générale',
+    subtitle: 'Obtention du DNB (2024)',
+    description: 'Troisième générale avec obtention du Diplôme National du Brevet.',
+    icon: GraduationCap,
+    current: false,
   },
 ]
 
@@ -350,7 +358,7 @@ export default function Home() {
             >
               <Badge variant="outline" className="border-cyber/30 text-cyber bg-cyber/5 font-mono text-xs mb-4">
                 <GraduationCap className="w-3 h-3 mr-1" />
-                1ère BAC Pro CIEL — Alternance
+                SEPR — 1ère Pro CIEL · Alternance
               </Badge>
             </motion.div>
 
@@ -370,7 +378,7 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Étudiant en <span className="text-cyber font-medium">1ère BAC Pro CIEL</span> en alternance.
+              Étudiant au <span className="text-cyber font-medium">SEPR</span> en 1ère Professionnelle CIEL en alternance.
               Je me forme en cybersécurité, analyse réseau et support informatique.
             </motion.p>
 
@@ -480,8 +488,8 @@ export default function Home() {
             {/* Bio */}
             <div className="md:col-span-3 space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Je suis <span className="text-foreground font-medium">Tom Latchimy</span>, élève en{' '}
-                <span className="text-cyber font-medium">1ère BAC Pro CIEL</span> en alternance dans un service informatique.
+                Je suis <span className="text-foreground font-medium">Tom Latchimy</span>, élève au{' '}
+                <span className="text-cyber font-medium">SEPR en 1ère Professionnelle CIEL</span> en alternance dans un service informatique.
                 Je me forme chaque jour en cybersécurité, analyse réseau et support IT.
               </p>
 
@@ -495,7 +503,7 @@ export default function Home() {
 
               <div className="grid grid-cols-2 gap-4 pt-2">
                 {[
-                  { icon: GraduationCap, label: 'Formation', value: 'BAC Pro CIEL' },
+                  { icon: GraduationCap, label: 'Formation', value: 'SEPR — 1ère Pro CIEL' },
                   { icon: Briefcase, label: 'Alternance', value: 'Service informatique' },
                   { icon: Wifi, label: 'Intérêt', value: 'Analyse réseau' },
                   { icon: Shield, label: 'Objectif', value: 'Cybersécurité' },

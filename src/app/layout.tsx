@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Tom Latchimy — Portfolio Cybersécurité",
-  description: "Portfolio professionnel en cybersécurité – Analyse réseau, Linux, HTB Academy. Étudiant en BAC Pro CIEL en alternance.",
-  keywords: ["cybersécurité", "sécurité informatique", "Wireshark", "Linux", "HTB Academy", "analyse réseau", "portfolio"],
+  description: "Portfolio professionnel en cybersécurité – Étudiant au SEPR en 1ère Professionnelle CIEL en alternance. Analyse réseau, Linux, HTB Academy.",
+  keywords: ["cybersécurité", "sécurité informatique", "Wireshark", "Linux", "HTB Academy", "analyse réseau", "portfolio", "SEPR", "CIEL"],
   authors: [{ name: "Tom Latchimy" }],
   icons: {
     icon: "/avatar.png",
