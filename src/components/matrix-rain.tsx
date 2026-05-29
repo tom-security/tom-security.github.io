@@ -16,6 +16,10 @@ export function MatrixRain() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
+    // Respect prefers-reduced-motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReducedMotion) return
+
     const canvas = canvasRef.current
     if (!canvas) return
 
@@ -23,6 +27,7 @@ export function MatrixRain() {
     if (!ctx) return
 
     let animationId: number
+    let isVisible = true
     const columns: Column[] = []
     const fontSize = 14
     const columnWidth = 20
@@ -44,6 +49,11 @@ export function MatrixRain() {
     }
 
     const draw = () => {
+      if (!isVisible) {
+        animationId = requestAnimationFrame(draw)
+        return
+      }
+
       ctx.fillStyle = 'rgba(5, 8, 15, 0.05)'
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
@@ -75,12 +85,19 @@ export function MatrixRain() {
       animationId = requestAnimationFrame(draw)
     }
 
+    // Pause animation when tab is not visible to save CPU
+    const handleVisibilityChange = () => {
+      isVisible = !document.hidden
+    }
+
     resize()
     window.addEventListener('resize', resize)
+    document.addEventListener('visibilitychange', handleVisibilityChange)
     draw()
 
     return () => {
       window.removeEventListener('resize', resize)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
       cancelAnimationFrame(animationId)
     }
   }, [])

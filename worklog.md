@@ -23,3 +23,33 @@ Stage Summary:
 - All original content preserved and enhanced
 - Responsive design with framer-motion animations
 - Lint passing, no compilation errors
+
+---
+Task ID: 2
+Agent: Main Agent
+Task: Audit complet + ajustement compétences + améliorations
+
+Work Log:
+- Audit complet du portfolio V1 identifiant 12 problèmes majeurs
+- Compétences réajustées de 50-82% vers système de niveaux (Notions/En cours/Découverte)
+- Terminal hero changé : commandes adaptées au niveau (whoami, ip addr, wireshark, echo)
+- Ajout section "Parcours" avec timeline formation + alternance
+- Ajout section détail alternance avec 6 missions décrites
+- Ajout bloc "Ce que j'ai appris" dans les projets
+- Terminal maintenant visible sur mobile (version compacte)
+- Bouton "Retour en haut" ajouté (apparaît après scroll)
+- Skip-to-content link pour accessibilité
+- AnimatePresence sur menu mobile et bouton retour
+- MatrixRain optimisé : pause quand onglet pas visible + respect prefers-reduced-motion
+- Badge "En formation" au lieu de "Disponible"
+- Bio reformulée pour refléter le vrai profil
+- Email changé en placeholder plus neutre
+- Projets reformulés : moins ambitieux, plus honnêtes
+- Lint passing, compilation OK
+
+Stage Summary:
+- Portfolio V2 avec contenu honnête et crédible
+- Système de niveaux (3 paliers) remplace les pourcentages trompeurs
+- 2 nouvelles sections : Parcours + Détail Alternance
+- Optimisations perf + accessibilité
+- Toutes les améliorations de l'audit implémentées
