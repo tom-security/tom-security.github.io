@@ -215,3 +215,10 @@ html {
     linear-gradient(90deg, oklch(0.75 0.18 155 / 5%) 1px, transparent 1px);
   background-size: 50px 50px;
 }
+
+/* Hide Next.js dev indicator ("N" icon) */
+[data-nextjs-dialog-overlay],
+[data-nextjs-toast],
+nextjs-portal {
+  display: none !important;
+}

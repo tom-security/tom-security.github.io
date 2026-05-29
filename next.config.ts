@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   reactStrictMode: false,
+  devIndicators: false, // Supprime le logo "N" en bas à gauche
 };
 
 export default nextConfig;
