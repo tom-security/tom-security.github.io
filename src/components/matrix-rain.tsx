@@ -106,6 +106,7 @@ export function MatrixRain() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
+      style={{ maskImage: 'linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,1) 100%)', WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.6) 80%, rgba(0,0,0,1) 100%)' }}
       aria-hidden="true"
     />
   )

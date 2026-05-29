@@ -368,7 +368,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 pt-16 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background/70 z-10" />
           <img
             src="/cyber-bg.png"
             alt=""
@@ -481,6 +481,11 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Transition fondu Hero → About */}
+      <div className="relative z-10 h-32 -mt-1 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/30 to-transparent" />
+      </div>
+
       {/* About Section */}
       <SectionWrapper id="about" className="relative z-10 py-20 sm:py-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -553,6 +558,11 @@ export default function Home() {
           </div>
         </div>
       </SectionWrapper>
+
+      {/* Fondu About → Parcours */}
+      <div className="relative z-10 h-20 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent" />
+      </div>
 
       {/* Parcours / Formation Section */}
       <SectionWrapper id="parcours" className="relative z-10 py-20 sm:py-28 grid-pattern">
@@ -630,6 +640,11 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
+      {/* Fondu Parcours → Skills */}
+      <div className="relative z-10 h-20 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
+      </div>
+
       {/* Skills Section - Avec système de niveaux */}
       <SectionWrapper id="skills" className="relative z-10 py-20 sm:py-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -705,6 +720,11 @@ export default function Home() {
           </div>
         </div>
       </SectionWrapper>
+
+      {/* Fondu Skills → Projects */}
+      <div className="relative z-10 h-20 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent" />
+      </div>
 
       {/* Projects Section */}
       <SectionWrapper id="projects" className="relative z-10 py-20 sm:py-28 grid-pattern">
@@ -832,6 +852,11 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
+      {/* Fondu Projects → Contact */}
+      <div className="relative z-10 h-20 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
+      </div>
+
       {/* Contact Section */}
       <SectionWrapper id="contact" className="relative z-10 py-20 sm:py-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -903,6 +928,11 @@ export default function Home() {
           </div>
         </div>
       </SectionWrapper>
+
+      {/* Fondu Contact → Soft Skills */}
+      <div className="relative z-10 h-20 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-background to-transparent" />
+      </div>
 
       {/* Soft Skills, Langues & Centres d'intérêt */}
       <SectionWrapper id="about-me" className="relative z-10 py-20 sm:py-28 grid-pattern">
