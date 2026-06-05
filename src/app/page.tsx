@@ -499,28 +499,9 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-5 gap-8 items-start">
-            {/* Avatar */}
-            <div className="md:col-span-2 flex justify-center">
-              <div className="relative">
-                <div className="absolute -inset-2 bg-cyber/20 blur-xl rounded-2xl" />
-                <div className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border-2 border-cyber/30 glow-border">
-                  <img
-                    src="/avatar.png"
-                    alt="Tom Latchimy — Étudiant en cybersécurité"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {/* Status indicator */}
-                <div className="absolute -bottom-2 -right-2 bg-card border border-cyber/30 rounded-lg px-3 py-1.5 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                  <span className="text-xs font-mono text-cyber">En formation</span>
-                </div>
-              </div>
-            </div>
-
+          <div className="max-w-3xl mx-auto">
             {/* Bio */}
-            <div className="md:col-span-3 space-y-6">
+            <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Je suis <span className="text-foreground font-medium">Tom Latchimy</span>, élève à la{' '}
                 <span className="text-cyber font-medium">SEPR en 1ère Professionnelle CIEL</span>, en alternance au service informatique de <span className="text-cyber font-medium">DOMINO-RH</span>.
