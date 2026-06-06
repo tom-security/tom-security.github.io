@@ -39,8 +39,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Tom Latchimy",
+    email: "tomiatchimy6@gmail.com",
+    url: "https://tom-security.github.io",
+    description:
+      "Élève en 1ère Professionnelle CIEL à la SEPR, en alternance au service informatique chez DOMINO-RH. Passionné de cybersécurité.",
+    sameAs: [
+      "https://github.com/tom-security",
+      "https://www.linkedin.com/in/tom-latchimy",
+    ],
+  };
+
   return (
     <html lang="fr" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >

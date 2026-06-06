@@ -36,6 +36,8 @@ import {
   Printer,
   Cable,
   Download,
+  Award,
+  CheckCircle2,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
@@ -51,6 +53,7 @@ const NAV_LINKS = [
   { href: '#parcours', label: 'Parcours' },
   { href: '#skills', label: 'Compétences' },
   { href: '#projects', label: 'Projets' },
+  { href: '#certifications', label: 'Certifications' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -168,6 +171,22 @@ const PROJECTS = [
     status: 'coming' as const,
   },
 ]
+
+const CERTIFICATIONS = [
+  {
+    title: 'HTB Certified Junior Cybersecurity Associate',
+    issuer: 'Hack The Box',
+    status: 'a_venir' as const,
+    link: 'https://academy.hackthebox.com/preview/certifications/htb-certified-junior-cybersecurity-associate',
+  },
+]
+
+// Statuts de certification avec couleurs distinctes
+const CERT_STATUS_CONFIG = {
+  obtenu: { label: 'Obtenu', icon: CheckCircle2, badgeClass: 'bg-cyber/20 text-cyber border-cyber/30', borderClass: 'hover:border-cyber/40', iconClass: 'text-cyber' },
+  en_cours: { label: 'En cours', icon: Clock, badgeClass: 'bg-amber-500/20 text-amber-400 border-amber-500/30', borderClass: 'hover:border-amber-500/40', iconClass: 'text-amber-400' },
+  a_venir: { label: 'À venir', icon: Clock, badgeClass: 'bg-slate-500/20 text-slate-400 border-slate-500/30', borderClass: 'hover:border-slate-500/40', iconClass: 'text-slate-400' },
+} as const
 
 // Commandes terminal adaptées au niveau d'un élève de 1ère BAC Pro
 const TERMINAL_LINES = [
@@ -840,7 +859,77 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      {/* Fondu Projects → Contact */}
+      {/* Fondu Projects → Certifications */}
+      <div className="relative z-10 h-20 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
+      </div>
+
+      {/* Certifications Section */}
+      <SectionWrapper id="certifications" className="relative z-10 py-20 sm:py-28">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <Badge variant="outline" className="border-cyber/30 text-cyber bg-cyber/5 font-mono text-xs mb-4">
+              <Award className="w-3 h-3 mr-1" />
+              CERTIFICATIONS
+            </Badge>
+            <h2 className="text-3xl sm:text-4xl font-bold mt-2">
+              Mes <span className="text-cyber">certifications</span>
+            </h2>
+            <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+              Les certifications que je vise pour valider mes compétences.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {CERTIFICATIONS.map((cert, idx) => {
+              const statusConfig = CERT_STATUS_CONFIG[cert.status]
+              const StatusIcon = statusConfig.icon
+              return (
+                <motion.div
+                  key={cert.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                >
+                  <Card className={`bg-card/60 backdrop-blur-sm border-border/50 ${statusConfig.borderClass} transition-all glow-border-hover group h-full`}>
+                    <CardHeader>
+                      <div className="flex items-start justify-between gap-2">
+                        <CardTitle className="flex items-center gap-2 text-lg">
+                          <Award className={`w-5 h-5 ${statusConfig.iconClass} shrink-0`} />
+                          {cert.title}
+                        </CardTitle>
+                        <Badge className={`${statusConfig.badgeClass} font-mono text-xs shrink-0`}>
+                          <StatusIcon className="w-3 h-3 mr-1" />
+                          {statusConfig.label}
+                        </Badge>
+                      </div>
+                      <CardDescription className="text-muted-foreground leading-relaxed">
+                        Émise par <span className="text-cyber font-medium">{cert.issuer}</span>
+                      </CardDescription>
+                    </CardHeader>
+
+                    <CardContent>
+                      <Button
+                        variant="outline"
+                        className="w-full border-cyber/30 text-cyber hover:bg-cyber/10 font-mono"
+                        asChild
+                      >
+                        <a href={cert.link} target="_blank" rel="noopener noreferrer">
+                          Voir la certification
+                          <ExternalLink className="w-3 h-3 ml-2" />
+                        </a>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Fondu Certifications → Contact */}
       <div className="relative z-10 h-20 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
       </div>
