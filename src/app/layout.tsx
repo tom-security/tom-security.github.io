@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     title: "Tom Latchimy — Portfolio Cybersécurité",
     description: "Portfolio professionnel en cybersécurité – projets, analyses et apprentissages.",
     type: "website",
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Tom Latchimy — Portfolio Cybersécurité' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/og-image.png'],
   },
 };
 
