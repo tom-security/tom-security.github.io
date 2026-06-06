@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://tom-security.github.io'),
   title: "Tom Latchimy — Portfolio Cybersécurité",
   description: "Portfolio professionnel en cybersécurité – Étudiant à la SEPR en 1ère Professionnelle CIEL en alternance. Analyse réseau, Linux, HTB Academy.",
   keywords: ["cybersécurité", "sécurité informatique", "Wireshark", "Linux", "HTB Academy", "analyse réseau", "portfolio", "SEPR", "CIEL"],
