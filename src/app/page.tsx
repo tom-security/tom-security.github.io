@@ -35,6 +35,7 @@ import {
   Plane,
   Printer,
   Cable,
+  Download,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
@@ -426,6 +427,12 @@ export default function Home() {
               <Button asChild variant="outline" className="border-cyber/30 text-cyber hover:bg-cyber/10 font-mono">
                 <a href="#contact">
                   Me contacter
+                </a>
+              </Button>
+              <Button asChild variant="outline" className="border-cyber/30 text-cyber hover:bg-cyber/10 hover:glow-border font-mono">
+                <a href="/CV_TomLATCHIMY.pdf" download>
+                  <Download className="w-4 h-4 mr-1" />
+                  Télécharger mon CV
                 </a>
               </Button>
             </motion.div>
