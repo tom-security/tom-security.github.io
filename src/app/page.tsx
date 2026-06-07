@@ -66,8 +66,8 @@ const SKILLS = [
     items: [
       { name: 'Active Directory (comptes & groupes)', level: 'en_cours' },
       { name: 'Résolution de tickets (Helpdesk)', level: 'en_cours' },
-      { name: 'Assistance utilisateurs N1', level: 'en_cours' },
-      { name: 'Installation & config postes', level: 'notions' },
+      { name: 'Assistance utilisateurs N2', level: 'en_cours' },
+      { name: 'Installation & config postes', level: 'en_cours' },
     ],
   },
   {
@@ -75,8 +75,8 @@ const SKILLS = [
     icon: Wrench,
     items: [
       { name: 'Dépannage matériel & imprimantes', level: 'en_cours' },
-      { name: 'Installation OS & maintenance', level: 'notions' },
-      { name: 'Câblage RJ45', level: 'notions' },
+      { name: 'Installation OS & maintenance', level: 'en_cours' },
+      { name: 'Câblage RJ45', level: 'en_cours' },
       { name: 'Wireshark — bases', level: 'découverte' },
     ],
   },
@@ -84,9 +84,9 @@ const SKILLS = [
     category: 'Systèmes & Réseaux',
     icon: Terminal,
     items: [
-      { name: 'Windows / Active Directory', level: 'notions' },
-      { name: 'Commandes Linux de base', level: 'découverte' },
-      { name: 'Modèle OSI / TCP-IP', level: 'en_cours' },
+      { name: 'Windows / Active Directory', level: 'en_cours' },
+      { name: 'Commandes Linux de base', level: 'notions' },
+      { name: 'Modèle OSI / TCP-IP', level: 'notions' },
       { name: 'Protocoles (HTTP, DNS)', level: 'notions' },
     ],
   },
@@ -97,7 +97,7 @@ const SKILLS = [
       { name: 'Bonnes pratiques de sécurité', level: 'en_cours' },
       { name: 'HTB Academy (débuts)', level: 'découverte' },
       { name: 'Chiffrement & TLS (concepts)', level: 'découverte' },
-      { name: 'Sensibilisation aux risques', level: 'notions' },
+      { name: 'Sensibilisation aux risques', level: 'en_cours' },
     ],
   },
 ]
